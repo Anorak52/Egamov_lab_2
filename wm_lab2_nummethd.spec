@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['wm_lab2_nummethd.py'],
-             pathex=['D:\\App\\GitRepo\\numerical_method_lab2'],
+             pathex=['D:\\App\\GitRepo\\Egamov_lab_2'],
              binaries=[],
              datas=[],
              hiddenimports=[],

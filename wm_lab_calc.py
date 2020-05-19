@@ -12,6 +12,13 @@ import time, threading
 import math
 from matplotlib import pyplot as plt
 
+global green, _x, a, canvas
+
+def continue_():
+    a.plot(_x, green, label = "Final temp A", color='yellow')
+    a.legend()
+    canvas.draw()
+
 def method(A, B, C, F):
     size = len(F)
     sizeM = size - 1
@@ -144,7 +151,7 @@ def main(l, T, h_t, h_x, b0, b1, b2, f0, f1):
     btn.grid(row=0,column=0)
 
 
-def continue_():
-    a.plot(_x, green, label = "Final temp A", color='yellow')
-    a.legend()
-    canvas.draw()
+# def continue_():
+#     a.plot(_x, green, label = "Final temp A", color='yellow')
+#     a.legend()
+#     canvas.draw()
