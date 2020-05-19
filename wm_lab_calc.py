@@ -145,6 +145,6 @@ def main(l, T, h_t, h_x, b0, b1, b2, f0, f1):
 
 
 def continue_():
-    a.plot(_x, green, label = "Final temp A", color='green')
+    a.plot(_x, green, label = "Final temp A", color='yellow')
     a.legend()
     canvas.draw()
