@@ -12,7 +12,7 @@ import time, threading
 import math
 from matplotlib import pyplot as plt
 
-global green, _x, a, canvas
+global yellow, _x, a, canvas
 
 def continue_():
     a.plot(_x, green, label = "Final temp A", color='yellow')
@@ -90,7 +90,7 @@ def main(l, T, h_t, h_x, b0, b1, b2, f0, f1):
         else:
             w_I = w_I + 2 * w[j]
         j = j + 1
-    w_I = w_I * h_x / 6
+    w_I = w_I * h_x / 3
     for i in range(n):
         w[i] = w[i] / w_I
     j = 0
@@ -126,12 +126,12 @@ def main(l, T, h_t, h_x, b0, b1, b2, f0, f1):
             else:
                 I = I + 2 * y[k] * b[k]
             k = k + 1
-        I = I * h_x / 6
+        I = I * h_x / 3
         j = j + 1
 
 
-    global green, _x, a, canvas
-    green = w
+    global dop, _x, a, canvas
+    dop = w
     _x = x
     fig = Figure(figsize=(8,5))
     a = fig.add_subplot(111)
@@ -151,7 +151,7 @@ def main(l, T, h_t, h_x, b0, b1, b2, f0, f1):
     btn.grid(row=0,column=0)
 
 
-# def continue_():
-#     a.plot(_x, green, label = "Final temp A", color='yellow')
-#     a.legend()
-#     canvas.draw()
+def continue_():
+    a.plot(_x, dop, label = "Final temp A", color='green')
+    a.legend()
+    canvas.draw()
